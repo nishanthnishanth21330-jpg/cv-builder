@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV Builder — My Resumes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="sidebar-root"></div>
+
+<div class="app-shell">
+  <div class="main">
+    <p class="page-eyebrow">DASHBOARD</p>
+    <h1 class="page-title">My Resumes</h1>
+    <p class="page-lede">Every CV you've generated on this device, ready to preview, edit, download or remove.</p>
+
+    <div class="btn-row" style="margin-bottom:28px;">
+      <a href="templates.html" class="btn btn-primary">+ Create New Resume</a>
+    </div>
+
+    <div class="resume-grid" id="resumesGrid"></div>
+
+    <div class="empty-state" id="resumesEmpty" style="display:none;">
+      <div class="glyph">📄</div>
+      <h3>No resumes yet</h3>
+      <p>Choose a template to build your first CV.</p>
+      <div style="margin-top:18px;"><a href="templates.html" class="btn btn-primary">Browse Templates</a></div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>initResumesPage();</script>
+</body>
+</html>

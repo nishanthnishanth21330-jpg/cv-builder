@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV Builder — Build Your CV</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="sidebar-root"></div>
+
+<div class="app-shell">
+  <div class="main">
+    <p class="page-eyebrow">STEP 3 · TEMPLATE: <span id="activeTemplateBadge">—</span></p>
+    <h1 class="page-title" id="formHeading">Build Your CV</h1>
+    <p class="page-lede">Fill in as much as applies to you. Fields marked with an asterisk are required; everything else stays out of your CV if left empty.</p>
+
+    <div class="form-banner" id="formBanner"></div>
+
+    <form id="cvForm" novalidate>
+
+      <!-- Photo -->
+      <div class="photo-upload">
+        <label for="photoInput" style="display:flex;align-items:center;gap:22px;flex:1;cursor:pointer;">
+          <div class="avatar" id="photoAvatar">📷</div>
+          <div class="copy">
+            <strong>Upload Profile Photo</strong>
+            <span>JPG or PNG · tap to choose from your gallery or capture with your camera</span>
+          </div>
+        </label>
+        <div class="photo-actions">
+          <button type="button" class="btn btn-secondary btn-sm" id="removePhotoBtn" style="display:none;">Remove</button>
+        </div>
+      </div>
+      <input type="file" id="photoInput" accept="image/png, image/jpeg" style="display:none;">
+
+      <!-- Personal information -->
+      <section>
+        <h2 class="section-title">👤 Personal Information</h2>
+        <p class="section-sub">Required — this appears at the top of every template.</p>
+        <div class="card">
+          <div class="form-grid">
+            <div class="field"><label>Full Name *</label><input type="text" id="f_fullName" placeholder="Name"><div class="error-msg">Full name is required.</div></div>
+            <div class="field"><label>Phone Number *</label><input type="tel" id="f_phone" placeholder="+91 98765 43210"><div class="error-msg">Enter a valid phone number.</div></div>
+            <div class="field"><label>Email ID *</label><input type="email" id="f_email" placeholder="you@example.com"><div class="error-msg">Enter a valid email address.</div></div>
+            <div class="field"><label>Location *</label><input type="text" id="f_location" placeholder="Chennai, Tamil Nadu"><div class="error-msg">Location is required.</div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Career objective -->
+      <section>
+        <h2 class="section-title">🎯 Career Objective</h2>
+        <div class="card">
+          <div class="field" style="margin-bottom:0;">
+            <textarea id="f_objective" rows="4" placeholder="A short statement about the role you're seeking and what you bring to it."></textarea>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section>
+        <h2 class="section-title">🎓 Education / Qualification</h2>
+        <div class="card">
+          <div class="record-list" id="list_education"></div>
+          <button type="button" class="btn btn-secondary btn-sm" id="add_education">+ Add Education</button>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section>
+        <h2 class="section-title">💻 Technical Skills</h2>
+        <div class="card">
+          <div class="chip-input-row">
+            <input type="text" id="chipInput_skills" placeholder="e.g. JavaScript — press Enter to add">
+            <button type="button" class="btn btn-secondary" id="chipAdd_skills">Add</button>
+          </div>
+          <div class="chips" id="chips_skills"></div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section>
+        <h2 class="section-title">🛠️ Projects</h2>
+        <div class="card">
+          <div class="record-list" id="list_projects"></div>
+          <button type="button" class="btn btn-secondary btn-sm" id="add_projects">+ Add Project</button>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section>
+        <h2 class="section-title">🏢 Internship / Work Experience</h2>
+        <p class="section-sub">Optional.</p>
+        <div class="card">
+          <div class="record-list" id="list_experience"></div>
+          <button type="button" class="btn btn-secondary btn-sm" id="add_experience">+ Add Experience</button>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section>
+        <h2 class="section-title">📜 Certifications / Courses</h2>
+        <div class="card">
+          <div class="record-list" id="list_certifications"></div>
+          <button type="button" class="btn btn-secondary btn-sm" id="add_certifications">+ Add Certification</button>
+        </div>
+      </section>
+
+      <!-- Achievements -->
+      <section>
+        <h2 class="section-title">🏆 Achievements</h2>
+        <div class="card">
+          <div class="chip-input-row">
+            <input type="text" id="chipInput_achievements" placeholder="e.g. Won college hackathon — press Enter to add">
+            <button type="button" class="btn btn-secondary" id="chipAdd_achievements">Add</button>
+          </div>
+          <div class="chips" id="chips_achievements"></div>
+        </div>
+      </section>
+
+      <!-- Languages -->
+      <section>
+        <h2 class="section-title">🗣️ Languages Known</h2>
+        <div class="card">
+          <div class="chip-input-row">
+            <input type="text" id="chipInput_languages" placeholder="e.g. Tamil — press Enter to add">
+            <button type="button" class="btn btn-secondary" id="chipAdd_languages">Add</button>
+          </div>
+          <div class="chips" id="chips_languages"></div>
+        </div>
+      </section>
+
+      <!-- Hobbies -->
+      <section>
+        <h2 class="section-title">🎨 Hobbies / Interests</h2>
+        <div class="card">
+          <div class="chip-input-row">
+            <input type="text" id="chipInput_hobbies" placeholder="e.g. Reading — press Enter to add">
+            <button type="button" class="btn btn-secondary" id="chipAdd_hobbies">Add</button>
+          </div>
+          <div class="chips" id="chips_hobbies"></div>
+        </div>
+      </section>
+
+      <!-- Strengths -->
+      <section>
+        <h2 class="section-title">👨‍💻 Strengths</h2>
+        <p class="section-sub">Optional.</p>
+        <div class="card">
+          <div class="chip-input-row">
+            <input type="text" id="chipInput_strengths" placeholder="e.g. Quick learner — press Enter to add">
+            <button type="button" class="btn btn-secondary" id="chipAdd_strengths">Add</button>
+          </div>
+          <div class="chips" id="chips_strengths"></div>
+        </div>
+      </section>
+
+      <!-- Declaration -->
+      <section>
+        <h2 class="section-title">📄 Declaration</h2>
+        <p class="section-sub">Optional.</p>
+        <div class="card">
+          <div class="field" style="margin-bottom:0;">
+            <textarea id="f_declaration" rows="3" placeholder="I hereby declare that the information given above is true to the best of my knowledge."></textarea>
+          </div>
+        </div>
+      </section>
+
+      <div class="btn-row" style="margin-top:8px;">
+        <button type="submit" class="btn btn-primary">🚀 Generate CV</button>
+        <button type="button" class="btn btn-secondary" id="resetFormBtn">🔄 Reset</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>initCvFormPage();</script>
+</body>
+</html>

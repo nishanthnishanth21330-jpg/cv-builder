@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV Builder — Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="sidebar-root"></div>
+
+<div class="app-shell">
+  <div class="main">
+
+    <p class="page-eyebrow">CV BUILDER</p>
+    <h1 class="brand-hero">CV Builder</h1>
+    <p class="page-lede" id="homeGreeting">Welcome to CV Builder</p>
+    <p class="page-lede" style="margin-top:-22px;">
+      Turn your education, projects and skills into a polished, ready-to-share resume in a few
+      guided steps — no design experience needed.
+    </p>
+
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="num" id="statResumeCount">0</div>
+        <div class="lbl">Resumes saved on this device</div>
+      </div>
+      <div class="stat-card">
+        <div class="num" id="statTemplateCount">15</div>
+        <div class="lbl">Templates to choose from</div>
+      </div>
+      <div class="stat-card">
+        <div class="num" id="statLoginStatus">—</div>
+        <div class="lbl">Account status</div>
+      </div>
+    </div>
+
+    <div class="btn-row" style="margin-bottom:44px;">
+      <a href="templates.html" class="btn btn-primary" id="homeCta">Login to get started</a>
+      <a href="resumes.html" class="btn btn-secondary">View my resumes</a>
+    </div>
+
+    <section>
+      <h2 class="section-title">How to use this website</h2>
+      <p class="section-sub">Eight simple steps from login to a downloaded PDF.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <div><h3>Login</h3><p>Enter your full name and email address on the Login page, then select Login. No password is needed.</p></div>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <div><h3>Select a resume template</h3><p>Open the Templates page and pick the design that fits the role you're applying for.</p></div>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <div><h3>Fill in your CV details</h3><p>Add your personal, education, project and skill information into the guided form.</p></div>
+        </div>
+        <div class="step">
+          <div class="num">4</div>
+          <div><h3>Upload a profile photo</h3><p>Choose a photo from your device, or use your camera on a phone that supports it.</p></div>
+        </div>
+        <div class="step">
+          <div class="num">5</div>
+          <div><h3>Generate your CV</h3><p>Select Generate CV once every required field is filled in.</p></div>
+        </div>
+        <div class="step">
+          <div class="num">6</div>
+          <div><h3>Preview your CV</h3><p>Your finished resume opens on its own page, laid out in the template you chose.</p></div>
+        </div>
+        <div class="step">
+          <div class="num">7</div>
+          <div><h3>Edit your CV</h3><p>Select Edit CV at any time to return to the form with everything already filled in.</p></div>
+        </div>
+        <div class="step">
+          <div class="num">8</div>
+          <div><h3>Save and download</h3><p>Select Download CV as PDF. Your phone or computer saves it through its normal download system, so you'll find it in Downloads or your Files app.</p></div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>initHomePage();</script>
+</body>
+</html>
