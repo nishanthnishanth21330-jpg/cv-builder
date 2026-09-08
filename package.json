@@ -1,0 +1,24 @@
+{
+  "name": "cv-builder",
+  "version": "1.0.0",
+  "description": "A complete, responsive CV Builder website. Log in with your name and email, pick from 15 resume templates, fill in a guided form, and download a professional CV as a PDF — all from your phone or computer.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nishanthnishanth21330-jpg/cv-builder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/nishanthnishanth21330-jpg/cv-builder/issues"
+  },
+  "homepage": "https://github.com/nishanthnishanth21330-jpg/cv-builder#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
